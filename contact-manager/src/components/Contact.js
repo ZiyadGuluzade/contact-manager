@@ -9,7 +9,7 @@ class Contact extends Component {
 
         return (
             <div className="card card-body mb-3">
-                <h4>{name}</h4>
+                <h4>{name} <i class="fas fa-caret-right"></i></h4>
                 <ul className="list-group">
                    <li className="list-group-item">{email}</li> 
                    <li className="list-group-item">{phone}</li> 

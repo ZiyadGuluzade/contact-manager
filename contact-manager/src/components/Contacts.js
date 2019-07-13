@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import Contact from './Contact'
 class Contacts extends Component {
     // creating state of the component
-    constructor() {
-        super();
-        this.state = {
+    state = {
             contacts: [
                 {
                     id: 1,
@@ -26,7 +24,6 @@ class Contacts extends Component {
                 }
             ]
         }
-    }
 
     render() {
         // destructuring the state
