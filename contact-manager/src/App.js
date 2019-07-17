@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from './components/Header';
-import Contacts from './components/Contacts';
+import Header from './components/layout/Header';
+import Contacts from './components/contacts/Contacts';
+import Addcontact from './components/contacts/Addcontact';
 
 import {Provider} from './context';
 
@@ -13,6 +14,7 @@ function App() {
       <div className="App">
         <Header />
         <div className="container">
+          <Addcontact/>
           <Contacts/>
         </div>
       </div>
