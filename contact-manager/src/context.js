@@ -1,5 +1,21 @@
 import React, {Component} from 'react';
+
 const Context = React.createContext();
+
+// creating reducer to handle the DOM changes
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'DELETE_CONTACT':
+            return {
+                ...state,
+                contacts: state.contacts.filter(
+                    contact => contact.id !== action.payload
+                )
+            };
+        default: 
+            return state;
+    }
+};
 
 export class Provider extends Component {
     // creating global state
@@ -23,7 +39,8 @@ export class Provider extends Component {
                 email: 'm&m@gmail.com',
                 phone: '333-33-33'
             }
-        ]
+        ],
+        dispatch: action => this.setState(state => reducer(state, action))
     }
 
     render() {
